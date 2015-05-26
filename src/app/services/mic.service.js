@@ -17,7 +17,7 @@
     // set up canvas context for visualizer
 
     var canvas = document.querySelector('.visualizer');
-    var canvasCtx = canvas.getContext("2d");
+    var canvasCtx = canvas.getContext('2d');
 
     // canvas.setAttribute('width', 500);
     // canvas.setAttribute('height', 500);
@@ -78,7 +78,7 @@
 
         canvasCtx.lineTo(canvas.width, canvas.height/2);
         canvasCtx.stroke();
-      };
+      }
 
       draw();
     }

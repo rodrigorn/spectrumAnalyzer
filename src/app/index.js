@@ -1,7 +1,14 @@
-'use strict';
+(function () {
+  'use strict';
+  angular.module('spectrumAnalyzer', [
+    'ngTouch',
+    'ngSanitize',
+    'ui.router',
+    'ui.bootstrap'])
+  .config(config);
 
-angular.module('spectrumAnalyzer', ['ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap'])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  config.$inject = ['$stateProvider', '$urlRouterProvider'];
+  function config ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
         url: '/',
@@ -11,5 +18,9 @@ angular.module('spectrumAnalyzer', ['ngTouch', 'ngSanitize', 'ui.router', 'ui.bo
       });
 
     $urlRouterProvider.otherwise('/');
-  })
-;
+  }
+})();
+
+
+
+
