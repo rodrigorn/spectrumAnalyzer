@@ -39,7 +39,7 @@
       var WIDTH = canvas.width;
       var HEIGHT = canvas.height;
 
-      analyser.fftSize = 4096;
+      analyser.fftSize = 2048;
       var bufferLength = analyser.fftSize;
       var dataArray = new Uint8Array(bufferLength);
       analyser.getByteTimeDomainData(dataArray);
